@@ -212,7 +212,13 @@ Y_pred = logreg.predict(X_test)
 acc_log = round(logreg.score(X_train, Y_train) * 100, 2)
 acc_log
 
-
+#using SVM
+from sklearn.svm import SVC, LinearSVC
+clf = SVC()
+clf.fit(X_train, y_train)
+y_pred_svc = clf.predict(X_test)
+acc_svc = round(clf.score(X_train, y_train) * 100, 2)
+print (acc_svc)
 
 
 
